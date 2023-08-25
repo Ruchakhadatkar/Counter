@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        border: 1px solid blue;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        /* border: 1px solid black; */
+        height: 250px;
+        width: 350px;
+        justify-content: center;
+        align-items: center;
+      }
+      h1 {
+        text-align: center;
+        font-size: 45px;
+      }
+      .btns {
+        display: flex;
+        text-align: center;
+        margin-top: 45px;
+        height: 30px;
+      }
+      button {
+        margin: 0px 19px;
+        border-radius: 4px;
+        padding: 6px;
+        background-color: white;
+      }
+      h2 {
+        font-size: 89px;
+        text-align: center;
+        margin-top: 25px;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <h1>Counter</h1>
+        <h2 id="number">6</h2>
+        <div class="btns">
+          <button onclick="increse()">INCREASE</button>
+          <button onclick="reset()">RESET</button>
+          <button onclick="decrese()">DECREASE</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    let a = document.getElementById("number");
+    let b = 1;
+
+    function increse() {
+      console.log("Click", (b = b + 1));
+
+      a.innerHTML = b;
+    }
+
+    function reset() {
+      console.log("Click", (b = 1));
+
+      a.innerHTML = b;
+    }
+
+    function decrese() {
+      console.log("Click", (b = b - 1));
+
+      a.innerHTML = b;
+    }
+  </script>
+</html>
